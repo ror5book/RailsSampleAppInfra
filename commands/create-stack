@@ -1,0 +1,17 @@
+#-------------------------------------------------------------------------------------------------
+# コマンドの詳細に関しては、AWS CLI Command Reference をご確認ください。
+# http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html#cli-aws-cloudformation
+#
+# create-stackコマンドについて
+# http://docs.aws.amazon.com/cli/latest/reference/cloudformation/create-stack.html
+#-------------------------------------------------------------------------------------------------
+
+aws cloudformation create-stack --stack-name RailsSampleApp \
+                                --template-body https://raw.githubusercontent.com/ror5book/RailsSampleAppInfra/master/templates/stack_template.json \
+                                --tags Key=Name,Value=RailsSampleApp \
+                                --parameters ParameterKey=DBName,ParameterValue=RailsSampleApp \
+                                             ParameterKey=DBPassword,ParameterValue=[任意のパスワード] \
+                                             ParameterKey=DBRootPassword,ParameterValue=[任意のパスワード] \
+                                             ParameterKey=DBUser,ParameterValue=admin \
+                                             ParameterKey=InstanceType,ParameterValue=t2.micro \
+                                             ParameterKey=KeyName,ParameterValue=[ご自身のキーペア名]
