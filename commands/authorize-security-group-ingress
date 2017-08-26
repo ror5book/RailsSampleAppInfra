@@ -1,0 +1,17 @@
+#-------------------------------------------------------------------------------------------------
+# コマンドの詳細に関しては、AWS CLI Command Reference をご確認ください。
+# http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html#cli-aws-cloudformation
+#
+# authorize-security-group-ingressコマンドについて
+# http://docs.aws.amazon.com/cli/latest/reference/ec2/authorize-security-group-ingress.html
+#-------------------------------------------------------------------------------------------------
+
+aws ec2 authorize-security-group-ingress --group-name "RailsSampleApp" \
+                                         --ip-permissions '[{ "IpProtocol": "tcp",
+                                                              "FromPort": 80,
+                                                              "ToPort": 80,
+                                                              "IpRanges": [{ "CidrIp": "0.0.0.0/0" }] },
+                                                            { "IpProtocol": "tcp",
+                                                              "FromPort": 22,
+                                                              "ToPort": 22,
+                                                              "IpRanges": [{ "CidrIp": "0.0.0.0/0" }] }]'
