@@ -1,0 +1,16 @@
+#-------------------------------------------------------------------------------------------------
+# コマンドの詳細に関しては、AWS CLI Command Reference をご確認ください。
+# http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html#cli-aws-cloudformation
+#
+# update-stackコマンドについて
+# http://docs.aws.amazon.com/cli/latest/reference/cloudformation/update-stack.html
+#-------------------------------------------------------------------------------------------------
+
+aws cloudformation update-stack --stack-name RailsSampleApp \
+                                --template-body file:///pathtoproject/stack_template.json \
+                                --parameters ParameterKey=DBName,UsePreviousValue=true \
+                                             ParameterKey=KeyName,UsePreviousValue=true \
+                                             ParameterKey=DBPassword,UsePreviousValue=true \
+                                             ParameterKey=DBRootPassword,UsePreviousValue=true \
+                                             ParameterKey=DBUser,UsePreviousValue=true \
+                                             ParameterKey=InstanceType,ParameterValue=t2.micro
