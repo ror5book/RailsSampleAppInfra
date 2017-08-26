@@ -1,0 +1,10 @@
+#-------------------------------------------------------------------------------------------------
+# コマンドの詳細に関しては、AWS CLI Command Reference をご確認ください。
+# http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html#cli-aws-cloudformation
+#
+# create-security-groupコマンドについて
+# http://docs.aws.amazon.com/cli/latest/reference/ec2/create-security-group.html
+#-------------------------------------------------------------------------------------------------
+
+aws ec2 create-security-group --group-name RailsSampleApp \
+                              --description "Security Group for Rails Sample App"
