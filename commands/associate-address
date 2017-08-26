@@ -1,0 +1,10 @@
+#-------------------------------------------------------------------------------------------------
+# コマンドの詳細に関しては、AWS CLI Command Reference をご確認ください。
+# http://docs.aws.amazon.com/cli/latest/reference/cloudformation/index.html#cli-aws-cloudformation
+#
+# associate-addressコマンドについて
+# http://docs.aws.amazon.com/cli/latest/reference/ec2/associate-address.html
+#-------------------------------------------------------------------------------------------------
+
+aws ec2 associate-address --allocation-id eipalloc-xxxxxxxx \
+                          --instance i-xxxxxxxxxxxxxxxxx
