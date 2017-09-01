@@ -14,4 +14,4 @@ aws cloudformation create-stack --stack-name RailsSampleApp \
                                              ParameterKey=DBRootPassword,ParameterValue=[任意のパスワード] \
                                              ParameterKey=DBUser,ParameterValue=admin \
                                              ParameterKey=InstanceType,ParameterValue=t2.micro \
-                                             ParameterKey=KeyName,ParameterValue=[ご自身のキーペア名]
+                                             ParameterKey=KeyName,ParameterValue=RailsSampleAppKey
