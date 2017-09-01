@@ -9,6 +9,6 @@
 aws ec2 run-instances --image-id ami-xxxxxxxx \
                       --count 1 \
                       --instance-type t2.micro \
-                      --key-name RailsSampleAppKey\
+                      --key-name RailsSampleAppKey \
                       --security-group-ids sg-xxxxxxxx \
-                      --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=rails-sample-app}]'
+                      --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=RailsSampleAppForAMI}]'
